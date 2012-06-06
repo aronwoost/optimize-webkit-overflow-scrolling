@@ -1,3 +1,3 @@
-Repo with examples posted here.
+gh-pages repo with examples posted in this blog post.
 
-Visit to check them.
+[aronwoost.github.com/optimize-webkit-overflow-scrolling](http://aronwoost.github.com/optimize-webkit-overflow-scrolling)
