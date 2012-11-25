@@ -11,7 +11,7 @@
 				background-color: lightgrey;
 			}
 
-			#container {
+			.scollpane {
 				position:absolute;
 				top:30px;
 				left:30px;
@@ -23,7 +23,7 @@
 				-webkit-overflow-scrolling: touch;
 			}
 
-			#subcontainer {
+			.scollpane ul {
 				height:100%;
 				overflow-y: auto;
 			}
@@ -42,7 +42,7 @@
 			}, false);
 			
 			function ready(){
-				var container = document.getElementById("container");
+				var container = document.getElementsByClassName("scollpane")[0];
 				container.addEventListener("touchmove", function(evt){
 					evt.stopPropagation();
 				}, false);
@@ -50,38 +50,36 @@
 		</script>
 	</head>
 	<body>
-		<div id="container">
-			<div id="subcontainer">
-				<ul>
-					<li>Element 1</li>
-					<li>Element 2</li>
-					<li>Element 3</li>
-					<li>Element 4</li>
-					<li>Element 5</li>
-					<li>Element 6</li>
-					<li>Element 7</li>
-					<li>Element 8</li>
-					<li>Element 9</li>
-					<li>Element 10</li>
-					<li>Element 11</li>
-					<li>Element 12</li>
-					<li>Element 13</li>
-					<li>Element 14</li>
-					<li>Element 15</li>
-					<li>Element 16</li>
-					<li>Element 17</li>
-					<li>Element 18</li>
-					<li>Element 19</li>
-					<li>Element 21</li>
-					<li>Element 22</li>
-					<li>Element 23</li>
-					<li>Element 24</li>
-					<li>Element 25</li>
-					<li>Element 26</li>
-					<li>Element 27</li>
-					<li>Element 28</li>
-				</ul>
-			</div>
+		<div class="scollpane">
+			<ul>
+				<li>Element 1</li>
+				<li>Element 2</li>
+				<li>Element 3</li>
+				<li>Element 4</li>
+				<li>Element 5</li>
+				<li>Element 6</li>
+				<li>Element 7</li>
+				<li>Element 8</li>
+				<li>Element 9</li>
+				<li>Element 10</li>
+				<li>Element 11</li>
+				<li>Element 12</li>
+				<li>Element 13</li>
+				<li>Element 14</li>
+				<li>Element 15</li>
+				<li>Element 16</li>
+				<li>Element 17</li>
+				<li>Element 18</li>
+				<li>Element 19</li>
+				<li>Element 21</li>
+				<li>Element 22</li>
+				<li>Element 23</li>
+				<li>Element 24</li>
+				<li>Element 25</li>
+				<li>Element 26</li>
+				<li>Element 27</li>
+				<li>Element 28</li>
+			</ul>
 		</div>
 	</body>
 </html>

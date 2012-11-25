@@ -11,7 +11,7 @@
 				background-color: lightgrey;
 			}
 
-			#container {
+			.scollpane {
 				position:absolute;
 				top:30px;
 				left:30px;
@@ -23,7 +23,7 @@
 				-webkit-overflow-scrolling: touch;
 			}
 
-			#subcontainer {
+			.scollpane ul {
 				height:100%;
 				overflow-y: auto;
 			}
@@ -43,9 +43,9 @@
 			}, false);
 			
 			function ready(){
-				var container = document.getElementById("container");
-				var subcontainer = document.getElementById("subcontainer");
-				var subsubcontainer = document.getElementById("subsubcontainer");
+				var container = document.getElementsByClassName("scollpane")[0];
+				var subcontainer = container.children[0];
+				var subsubcontainer = container.children[0].children[0];
 
 				container.addEventListener("touchmove", function(evt){
 					if(subsubcontainer.getBoundingClientRect().height > subcontainer.getBoundingClientRect().height){
@@ -56,17 +56,15 @@
 		</script>
 	</head>
 	<body id="b">
-		<div id="container">
-			<div id="subcontainer">
-				<div id="subsubcontainer">
-					<ul>
-						<li>Element 1</li>
-						<li>Element 2</li>
-						<li>Element 3</li>
-						<li>Element 4</li>
-						<li>Element 5</li>
-					</ul>
-				</div>
+		<div class="scollpane">
+			<div id="subsubcontainer">
+				<ul>
+					<li>Element 1</li>
+					<li>Element 2</li>
+					<li>Element 3</li>
+					<li>Element 4</li>
+					<li>Element 5</li>
+				</ul>
 			</div>
 		</div>
 	</body>
